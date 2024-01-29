@@ -39,6 +39,8 @@ def todoToDictionary(todo:Todo) -> dict:
 #csrf 설정으로 클라이언트 애플리케이션을 별도로 구현하는 경우 필수 
 @method_decorator(csrf_exempt, name='dispatch')
 class TodoView(View):
+    def func(self):
+        pass
     def post(self, request):
         #클라이언트의 데이터를 json 형식으로 가져오기
         request = json.loads(request.body)
